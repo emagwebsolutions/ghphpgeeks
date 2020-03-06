@@ -1,0 +1,64 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<title>CSS TRICKS</title>
+<style>
+   /*Define global css variables*/
+   :root{
+       --red: #a91515;
+       --dblue: #281a6f;
+       --p-10: 10px;
+       --fw-b: 900;
+   }
+
+   h2{
+       color: var(--red);
+   }
+
+   h2+p{
+       background-color: var(--dblue);
+       color: #fff;
+       width: 300px;
+       padding: var(--p-10);
+   }
+
+   h2{
+       counter-increment: cnt;
+   }
+   h2:before{
+       content: counter(cnt) ". ";
+   }
+   h3::first-letter{
+       color: var(--red);
+       font-size: 33px;
+   }
+</style>
+</head>
+
+<body>
+
+<h1> View source code to see how css variables work</h1>
+
+<div class="container">
+<h2>Title One</h2>
+<p>
+Lorem ipsum, dolor sit amet consectetur adipisicing elit. Fugit neque vel excepturi blanditiis officia consequuntur impedit
+</p>
+
+<h2>Title Two</h2>
+<div>
+Lorem ipsum, dolor sit amet consectetur adipisicing elit. Fugit neque vel excepturi blanditiis officia consequuntur impedit
+</div>
+
+<h3>Title Two</h3>
+<p>
+Lorem ipsum, dolor sit amet consectetur adipisicing elit. Fugit neque vel excepturi blanditiis officia consequuntur impedit
+</p>
+
+</div>
+</body>
+</html>
+
+
+
